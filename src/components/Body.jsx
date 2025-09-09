@@ -12,6 +12,7 @@ import {
 import React from "react";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
+import { Link } from "react-router";
 
 export default function Body() {
   const projects = [
@@ -65,7 +66,9 @@ export default function Body() {
                 <Card.Description>{proj.desc}</Card.Description>
               </Card.Body>
               <Card.Footer gap="2">
-                <Button variant="solid">View</Button>
+                <Link to={proj.link} target="_blank" rel="noopener noreferrer">
+                  <Button variant="solid">View</Button>
+                </Link>
               </Card.Footer>
             </Card.Root>
           ))}
